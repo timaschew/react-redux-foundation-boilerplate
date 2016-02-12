@@ -21,7 +21,7 @@ Everything what you need to build an awesome Single Page Application:
 
 - responsive menu with a subnav
 - button to create a callout (formerly known as as alert)
-  - implemented in redux ([action](./src/actions/index.js), [3 routes](./src/reducers/index.js), store)
+  - implemented in redux ([action](./src/actions/index.js), [reducer](./src/reducers/index.js), store)
 - [3 routes](./src/routes.js)
  - `/` Dashboard
  - `/table` just a scrollable foundatino table
