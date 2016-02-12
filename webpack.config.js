@@ -4,7 +4,6 @@ var autoprefixer = require('autoprefixer')
 
 var assetPath = '/assets/'
 var absolutePath = path.join(__dirname, assetPath)
-console.log('abs path', absolutePath)
 
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
