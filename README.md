@@ -2,6 +2,17 @@
 
 Minimal Boilerplate for Redux + React + React-Router-Redux and Foundation
 
+## Usage
+
+```
+npm i
+npm start
+```
+
+Open [localhost:3000](http://localhost:3000)
+
+Use `CTRL + H` to toggle the Redux Dock Monitor
+
 ## What's in it?
 
 Everything what you need to build an awesome Single Page Application:
