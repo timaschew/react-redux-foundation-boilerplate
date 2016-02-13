@@ -1,9 +1,10 @@
 var path = require('path')
 var webpack = require('webpack')
 var autoprefixer = require('autoprefixer')
+var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 var assetPath = '/assets/'
-var absolutePath = path.join(__dirname, assetPath)
+var absolutePath = path.join(__dirname, 'build', assetPath)
 
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
@@ -19,7 +20,8 @@ module.exports = {
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
+    new webpack.NoErrorsPlugin(),
+    new ExtractTextPlugin("bundle.css")
   ],
   module: {
     loaders: [
@@ -44,11 +46,11 @@ module.exports = {
         // for some modules like foundation
         test: /\.scss$/,
         exclude: [/node_modules/], // sassLoader will include node_modules explicitly
-        loader: "style!css!postcss!sass?outputStyle=expanded"
+        loader: ExtractTextPlugin.extract("style", "css!postcss!sass?outputStyle=expanded")
       },
       {
         test: /\.css$/,
-        loader: 'style!css!postcss'
+        loader: ExtractTextPlugin.extract("style", "css!postcss")
       }
     ]
   },
