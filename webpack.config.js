@@ -7,7 +7,7 @@ var assetPath = '/assets/'
 var absolutePath = path.join(__dirname, 'build', assetPath)
 
 module.exports = {
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'source-map',
   entry: [
     'webpack-hot-middleware/client',
     './src/index'
@@ -51,11 +51,11 @@ module.exports = {
         // for some modules like foundation
         test: /\.scss$/,
         exclude: [/node_modules/], // sassLoader will include node_modules explicitly
-        loader: ExtractTextPlugin.extract("style", "css!postcss!sass?outputStyle=expanded")
+        loader: ExtractTextPlugin.extract("style", "css?sourceMap!postcss!sass?sourceMap&outputStyle=expanded")
       },
       {
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract("style", "css!postcss")
+        loader: ExtractTextPlugin.extract("style", "css?sourceMap!postcss")
       }
     ]
   },
