@@ -1,4 +1,4 @@
-# r³ Foundation Boilerplate
+# React-Redux-Foundation Boilerplate
 
 Minimal Boilerplate for Redux + React + React-Router-Redux and Foundation
 
