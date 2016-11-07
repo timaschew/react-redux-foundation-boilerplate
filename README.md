@@ -35,7 +35,7 @@ Everything what you need to build an awesome Single Page Application:
   - implemented in redux ([action](./src/actions/index.js), [reducer](./src/reducers/index.js), store)
 - [3 routes](./src/routes.js)
  - `/` Dashboard
- - `/table` just a scrollable foundatino table
+ - `/table` just a scrollable foundation table
  - `/*` 404 Catching Page
 - each container which is mapped to a route is wrapped by the [App](./src/containers/app.js) container
 - __App__ loads all important things in a clean way and the proper scope:
